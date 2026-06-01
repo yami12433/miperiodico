@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias Hoy</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.png">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+
+    <div class="topbar">
+
+        <div class="logo">
+            <img src="logo.jpg" alt="">
+            <span>con chatgpt y fe</span>
+        </div>
+
+        <!-- BOTON -->
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
+
+    </div>
+
+    <!-- MENU -->
+    <nav id="nav">
+
+        <ul>
+            <li><a href="#comida">Comida</a></li>
+            <li><a href="#deportes">Deportes</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+            <li><a href="#moda">Moda</a></li>
+             <li><a href="#musica">Musica</a></li>
+        </ul>
+
+    </nav>
+
+    <script>const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});</script>
+
+</header>
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="overlay"></div>
+  <h1>Periódico Digital Moderno</h1>
+</section>
+
+<!-- ===== CONTENIDO ===== -->
+<main class="container">
+
+<!-- ===== COMIDA ===== -->
+<section class="section" id="comida">
+  <h2 class="section-title">🍔 Comida</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+      <div class="card-content">
+        <h3>Restaurantes del año</h3>
+        <p>top 10 mejores restaurantes.</p>
+        <button class="btn" onclick="openModal('modalComida1')">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+      <div class="card-content">
+        <h3>Platillos famosos</h3>
+        <p>Comidas internacionales populares.</p>
+        <button class="btn" onclick="openModal('modalComida2')">Leer más</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== DEPORTES ===== -->
+<section class="section" id="deportes">
+  <h2 class="section-title">⚽ Deportes</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://imagenes.eleconomista.com.mx/files/og_thumbnail/uploads/2024/07/20/66e956f061db0.png">
+      <div class="card-content">
+        <h3>Fútbol internacional</h3>
+        <p>Resultados de ligas mundiales.</p>
+        <button class="btn" onclick="openModal('modalDeportes1')">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
+      <div class="card-content">
+        <h3>NBA</h3>
+        <p>Noticias sobre la NBA.</p>
+        <button class="btn" onclick="openModal('modalDeportes2')">Leer más</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== TECNOLOGÍA ===== -->
+<section class="section" id="tecnologia">
+  <h2 class="section-title">💻 Tecnología</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+      <div class="card-content">
+        <h3>Inteligencia Artificial</h3>
+        <p>La IA está cambiando el mundo.</p>
+        <button class="btn" onclick="openModal('modalTech1')">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+      <div class="card-content">
+        <h3>Aumento de la memoria RAM</h3>
+        <p>Aumento por culpa de la IA.</p>
+        <button class="btn" onclick="openModal('modalTech2')">Leer más</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MODA ===== -->
+<section class="section" id="moda">
+  <h2 class="section-title">👗 Moda</h2>
+  <div class="grid">
+
+<div class="video-container">
+  <video width="100%" controls>
+   <source src="videoplayback.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+</div>
+
+    <div class="card">
+      <img src="https://static.diariofemenino.com/media/5328/c/moda-md.jpg">
+      <div class="card-content">
+        <h3>Tendencias 2026</h3>
+        <p>Lo nuevo en moda mundial.</p>
+        <button class="btn" onclick="openModal('modalModa1')">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn-GCTaY4Uu43WaMMf_RKLjqTeSEV5K8q3nQ&s">
+      <div class="card-content">
+        <h3>Moda urbana</h3>
+        <p>Estilo callejero moderno.</p>
+        <button class="btn" onclick="openModal('modalModa2')">Leer más</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MÚSICA ===== -->
+<section class="section" id="musica">
+  <h2 class="section-title">🎵 Música</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://www.saps.com.mx/wp-content/uploads/2025/09/Este-es-el-top-10-de-canciones-mas-escuchadas-en-Spotify-Mexico-1170x658.jpg">
+      <div class="card-content">
+        <h3>Top artistas</h3>
+        <p>Los más escuchados del mundo.</p>
+        <button class="btn" onclick="openModal('modalMusica1')">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0jL-tlWSSv3fgeK-68hAoZSammTKB8pSdsg&s">
+      <div class="card-content">
+        <h3>nueva musica</h3>
+        <p>nuevos lanzamientos musicales</p>
+        <button class="btn" onclick="openModal('modalMusica2')">Leer más</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ===== MODALES ===== -->
+
+<!-- COMIDA -->
+<div id="modalComida1" class="modal">
+  <div class="modal-content">
+    <img src="https://e01-expansion.uecdn.es/assets/multimedia/imagenes/2019/06/25/15614775255199.jpg">
+    <span class="close" onclick="closeModal('modalComida1')">&times;</span>
+    <h2>los 10 mejores restaurantes</h2>
+    <p>  1 LMaido (Lima, Perú): Liderado por el chef Mitsuharu Tsumura, combina ingredientes peruanos con técnicas japonesas (cocina Nikkei).
+         2 Asador Etxebarri (Atxondo, España): Famoso por su cocina a la brasa bajo la dirección de Víctor Arguinzoniz.
+         3 Quintonil (Ciudad de México, México): Cocina mexicana contemporánea de los chefs Jorge Vallejo y Alejandra Flores.
+         4 DiverXO (Madrid, España): La propuesta creativa y vanguardista de Dabiz Muñoz.
+         5 Alchemist (Copenhague, Dinamarca): Una experiencia de "gastronomía holística" creada por Rasmus Munk.
+         6 Gaggan (Bangkok, Tailandia): El regreso triunfal de Gaggan Anand con su cocina india progresiva.
+         7 Sézanne (Tokio, Japón): Cocina francesa moderna con producto japonés de altísima calidad.
+         8 Table by Bruno Verjus (París, Francia): Un espacio donde el respeto absoluto al ingrediente es la prioridad.
+         9 Kjolle (Lima, Perú): Dirigido por Pía León, celebra la biodiversidad de los ecosistemas peruanos.
+        10 Don Julio (Buenos Aires, Argentina): Referente mundial de la parrilla argentina y la calidad de su carne.</p>
+  </div>
+</div>
+
+<div id="modalComida2" class="modal">
+  <div class="modal-content">
+    <img src="https://www.lanacion.com.py/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Flanacionpy%2FU6LAQKPRMFHQ5MVWZOFNN4JQTM.png?auth=de250d835bbd5dcc85e55802eb07f9a2e0a11a3da425a9ceeccf1801537d493d&width=1280&smart=true">
+    <span class="close" onclick="closeModal('modalComida2')">&times;</span>
+    <h2>Platos internacionales que destacan por su sabor</h2>
+    <p> Pizza (Italia): Especialmente la Margarita.
+        Sushi (Japón): Reconocido por su frescura y técnica.
+        Hamburguesa (EE. UU.): Un estandarte de la comida rápida global.
+        Pasta (Italia): En sus múltiples variedades como la boloñesa o carbonara.
+        Paella (España): El plato de arroz más famoso, típicamente de mariscos o mixta..</p>
+  </div>
+</div>
+
+<!-- DEPORTES -->
+<div id="modalDeportes1" class="modal">
+  <div class="modal-content">
+    <img src="https://vanguardia.com.mx/binrepository/1350x901/150c1/1200d900/down-right/11604/NORL/ap26138757758794_1-15476251_20260519223032.jpg">
+    <span class="close" onclick="closeModal('modalDeportes1')">&times;</span>
+    <h2>Premier League: Fin de la sequía del Arsena</h2>
+    <p>El Arsenal se ha proclamado campeón de la Premier League después de 22 años de espera.
+        El momento clave: El título se aseguró matemáticamente tras el empate 1-1 del Manchester City frente al Bournemouth.
+        Estadísticas del campeón: Los dirigidos por Mikel Arteta han liderado la tabla con 82 puntos a falta de una jornada, destacando a Viktor Gyökeres como su máximo goleador con 14 tantos.
+        Próximo reto: El Arsenal buscará el doblete histórico en la final de la Champions League contra el PSG</p>
+  </div>
+</div>
+
+<div id="modalDeportes2" class="modal">
+  <div class="modal-content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-B15Wd_Ye5WELuZjXfEX6l3duSU89Uu5-9A&s">
+    <span class="close" onclick="closeModal('modalDeportes2')">&times;</span>
+    <h2>Wembanyama firma una noche histórica y los Spurs golpean primero en la Final del Oeste</h2>
+    <p>OKLAHOMA CITY (19 de mayo de 2026) – En un inicio de finales de conferencia que ya se cataloga como un "clásico instantáneo", Victor Wembanyama protagonizó una actuación sin precedentes
+     para liderar a los San Antonio Spurs a una victoria de 122-115 sobre el Oklahoma City Thunder tras dos tiempos extra.</p>
+  </div>
+</div>
+
+<!-- TECNOLOGÍA -->
+<div id="modalTech1" class="modal">
+  <div class="modal-content">
+    <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/C2SO5S4FZ5F3NE3RDFALQOB76Y.jpg">
+    <span class="close" onclick="closeModal('modalTech1')">&times;</span>
+    <h2> La IA está revolucionando la educación, salud y tecnología.</h2>
+    <p>La IA ha pasado de la teoría a resultados históricos: hoy logra diagnosticar enfermedades con mayor precisión que los médicos, ha descifrado la estructura de casi todas
+         las proteínas conocidas para crear fármacos en tiempo récord, personaliza el aprendizaje para millones de alumnos según su ritmo y resuelve problemas matemáticos
+          y de programación de alta complejidad de forma autónoma.</p>
+  </div>
+</div>
+
+<div id="modalTech2" class="modal">
+  <div class="modal-content">
+     <img src="https://www.info-computer.com/modules/dbblog/views/img/post/evolucion-del-precio-de-la-ram-y-tendencia-reciente-ddr4-vs-ddr5.jpg">
+    <span class="close" onclick="closeModal('modalTech2')">&times;</span>
+    <h2>CRISIS DE HARDWARE 2026: EL PRECIO DE LA MEMORIA RAM SE DISPARA POR EL "EFECTO IA"</h2>
+    <p>El mercado de hardware enfrenta una crisis en mayo de 2026 debido a un aumento superior al 150% en el precio de la memoria RAM. Este fenómeno es impulsado principalmente por el auge de la Inteligencia Artificial, que ha llevado a los fabricantes
+      a priorizar la producción de chips para servidores de empresas como Nvidia y Microsoft, descuidando el mercado de consumo general.
+       Como consecuencia, actualizar una PC se ha vuelto sumamente costoso, con kits de alta gama alcanzando los $989 USD, mientras que los precios de los smartphones podrían subir hasta un 14%.
+        Se espera que esta tendencia se mantenga durante el resto del año, con una posible estabilización hasta finales de 2027 gracias a la llegada de nuevos competidores en la fabricación de chips.</p>
+  </div>
+</div>
+
+<!-- MODA -->
+<div id="modalModa1" class="modal">
+  <div class="modal-content">
+    <img src="https://www.chio-lecca.edu.pe/cdn/shop/articles/chio-lecca-blog-estilo-y-moda.jpg?v=1673918894">
+    <span class="close" onclick="closeModal('modalModa1')">&times;</span>
+    <h2>Moda 2026: El Renacimiento de la Forma y la Textura</h2>
+    <p>Este año, la moda se aleja de lo minimalista para abrazar el volumen extremo y la sensorialidad. La clave es el equilibrio entre la estructura arquitectónica y el detalle artesanal.
+        Siluetas: El corte "Balloon" (bombacho) es el rey absoluto, presente en faldas, pantalones y mangas que juegan con el aire y el movimiento.Colores:
+         El "Moretón" (púrpura profundo) y el rojo vibrante dominan las prendas de poder, mientras que el "Cloud Dancer" (blanco roto) define los looks etéreos y veraniegos.
+         Texturas: Regreso masivo del crochet moderno, los acabados en cuero tipo segunda piel, y el uso de plumas y flecos para añadir dinamismo al día a día.Estética:
+          Vuelven con fuerza los leggings ochenteros bajo vestidos de sastrería y los accesorios maximalistas en dorado.</p>
+  </div>
+</div>
+
+<div id="modalModa2" class="modal">
+  <div class="modal-content">
+    <img src="https://images.newyorkstyleguide.com/cdn-cgi/imagedelivery/iQi6oghKZnTnyD5BhCza-A/newyorkstyleguide.com/2026/03/Untitled-Project-2026-03-10T214358.671.jpg/w=1920,h=1080">
+    <span class="close" onclick="closeModal('modalModa2')">&times;</span>
+    <h2>🦂🌙Young Miko hace historia con Gap: Lanza la primera campaña de la marca totalmente en español</h2>
+    <p>NUEVA YORK – En un movimiento sin precedentes para sus 56 años de trayectoria, la icónica firma estadounidense Gap ha unido fuerzas con la estrella urbana puertorriqueña Young Miko
+         para presentar su nueva colección de primavera, marcando la primera vez que la marca lanza una campaña global íntegramente en español.Bajo el nombre "Sweats Like This", 
+         la colaboración fusiona la moda básica de lujo con el ritmo del trap y reguetón. El núcleo de la campaña es un video musical de alto impacto visual, dirigido por Bethany Vargas, donde Young Miko interpreta
+          una versión exclusiva de su éxito "WASSUP", acompañada por un elenco de 26 bailarines latinos que lucen las piezas de la temporada.</p>
+  </div>
+</div>
+
+<!-- MÚSICA -->
+<div id="modalMusica1" class="modal">
+  <div class="modal-content">
+    <img src="https://www.musicmundial.com/wp-content/uploads/2025/05/Estos-son-los-10-artistas-con-mas-oyentes-mensuales-en-Spotify-en-Mayo-2025.jpg">
+    <span class="close" onclick="closeModal('modalMusica1')">&times;</span>
+    <h2>Top 10 Artistas por Oyentes Mensuales (Mayo 2026)</h2>
+    <p>1 Justin Bieber – 147.8M 
+        2 Bruno Mars – 138.1M
+        3 The Weeknd – 115.5M
+        4 Rihanna – 112.6M
+        5 Lady Gaga – 103.0M
+        6 Taylor Swift – 102.2M
+        7 Michael Jackson – 102.1M
+        8 Bad Bunny – 101.0M
+        9 Coldplay – 90.6M
+        10 Drake – 89.3M.</p>
+  </div>
+</div>
+
+<div id="modalMusica2" class="modal">
+  <div class="modal-content">
+   <img src="https://admin.promonews.tv/sites/default/files/styles/bmvd_list/public/Young%20Miko%20%27BIAF%27%20by%20Kemel%20Jamis%20and%20Joshua%20Rivera.png?itok=Op9rIR8b">
+    <span class="close" onclick="closeModal('modalMusica2')">&times;</span>
+    <h2>Young Miko anuncia la llegada de "Do Not Disturb Deluxe": fecha de estreno y detalles exclusivos🦂🌙</h2>
+    <p>La estrella puertorriqueña expande su universo musical con una versión extendida de su último álbum, que incluirá nuevos temas y una estética renovada antes de iniciar su gira mundial.
+        Tras el éxito global de su reciente producción, Young Miko ha confirmado que el 29 de mayo de 2026 estará disponible la versión deluxe de Do Not Disturb. Esta nueva entrega busca profundizar
+         en el sonido experimental de la artista, combinando el trap con ritmos electrónicos, tal como se escuchó en su reciente sencillo BIAF.
+          El lanzamiento servirá como el preámbulo definitivo para su esperada gira Late Checkout Tour consolidando a Baby Miko como una de las figuras más influyentes del género urbano actual.</p>
+  </div>
+</div>
+
+<!-- ===== SCRIPT ===== -->
+<script src="script.js"></script>
+
+</body>
+</html>
